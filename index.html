@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مشويات العزبي | المنيو</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="#home" class="logo">🔥 مشويات العزبي</a>
+
+    <nav>
+      <a href="#home">الرئيسية</a>
+      <a href="#menu">المنيو</a>
+      <a href="#about">عن المطعم</a>
+      <a href="#contact">اتصل بنا</a>
+    </nav>
+
+    <button class="cart-button" id="openCart">
+      🛒 <span id="cartCount">0</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="eyebrow">أهلاً بيكم في</p>
+        <h1>مشويات <span>العزبي</span></h1>
+        <p>أشهى المشويات.. بطعم لا يُقاوم</p>
+        <a href="#menu" class="main-button">شوف المنيو</a>
+      </div>
+    </section>
+
+    <section class="features" id="about">
+      <div class="feature">
+        <span>🏅</span>
+        <h3>جودة عالية</h3>
+        <p>جودة في كل وجبة</p>
+      </div>
+      <div class="feature">
+        <span>🍽️</span>
+        <h3>مذاق أصيل</h3>
+        <p>تتبيلة مميزة</p>
+      </div>
+      <div class="feature">
+        <span>🔥</span>
+        <h3>مشويات طازجة</h3>
+        <p>من على الفحم</p>
+      </div>
+      <div class="feature">
+        <span>🌿</span>
+        <h3>مكونات طازجة</h3>
+        <p>اهتمام بكل التفاصيل</p>
+      </div>
+    </section>
+
+    <section class="menu-section" id="menu">
+      <div class="section-heading">
+        <p>اختار وجبتك المفضلة</p>
+        <h2>أطباق <span>المشويات</span></h2>
+      </div>
+
+      <div class="menu-controls">
+        <div class="categories" id="categories">
+          <button class="category active" data-category="all">كل الأصناف</button>
+          <button class="category" data-category="mixed">مشويات مشكلة</button>
+          <button class="category" data-category="kebab">كباب</button>
+          <button class="category" data-category="ribs">ريش</button>
+          <button class="category" data-category="tawook">طاووق</button>
+          <button class="category" data-category="chicken">فراخ</button>
+        </div>
+
+        <input
+          type="search"
+          id="searchInput"
+          placeholder="ابحث عن وجبة..."
+          aria-label="البحث عن وجبة"
+        >
+      </div>
+
+      <div class="menu-grid" id="menuGrid"></div>
+      <p id="emptyState" hidden>لا توجد أصناف مطابقة للبحث.</p>
+      <p class="note">الأسعار المعروضة تجريبية وقابلة للتعديل.</p>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <div>
+      <h2>🔥 مشويات العزبي</h2>
+      <p>طعم أصيل.. بجودة عالية</p>
+    </div>
+    <div>
+      <h3>تواصل معنا</h3>
+      <p>📍 أضف عنوان المطعم</p>
+      <p>☎️ أضف رقم الهاتف</p>
+    </div>
+    <p class="copyright">
+      © <span id="year"></span> مشويات العزبي - جميع الحقوق محفوظة
+    </p>
+  </footer>
+
+  <div class="overlay" id="overlay"></div>
+
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h2>سلة الطلبات</h2>
+      <button id="closeCart" aria-label="إغلاق السلة">✕</button>
+    </div>
+
+    <div id="cartItems" class="cart-items"></div>
+
+    <div class="cart-footer">
+      <h3>الإجمالي: <span id="cartTotal">0 جنيه</span></h3>
+      <button class="main-button" id="checkoutButton">تأكيد الطلب</button>
+      <p>السلة تجريبية ولا ترسل الطلب للمطعم حاليًا.</p>
+    </div>
+  </aside>
+
+  <div id="toast" class="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
